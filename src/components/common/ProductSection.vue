@@ -22,7 +22,7 @@ import ProductCard from './ProductCard.vue'
 
 const products = [
   {
-    image: '../src/assets/respaldoFamiliar.svg',
+    image: '/assets/respaldoFamiliar.svg',
     title: 'Respaldo Familiar',
     description: 'Un seguro que te ayuda a planificar tu futuro en el caso de cualquier eventualidad.',
     routeName: 'Respaldo' // Nombre de la ruta correspondiente
