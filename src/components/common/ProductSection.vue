@@ -52,7 +52,7 @@ const products = [
     routeName: 'SeguroVehiculos' // Nombre de la ruta correspondiente
   },
   {
-    image: '../src/assets/seguroHogar.svg',
+    image: 'src/assets/seguroHogar.svg',
     title: 'Seguro de Hogar',
     description: 'Asegura tu hogar contra cualquier eventualidad con nuestras coberturas completas.',
     routeName: 'SeguroHogar' // Nombre de la ruta correspondiente
