@@ -10,21 +10,20 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
-import { useRouter } from 'vue-router'  // Asegúrate de importar desde 'vue-router'
+import { useRouter } from 'vue-router';
 
-const props = defineProps({
-  image: String,
-  title: String,
-  description: String,
-  routeName: String // Agregar el nombre de la ruta como prop
-})
+const props = defineProps<{
+  image: string;
+  title: string;
+  description: string;
+  routeName: string;
+}>();
 
-const router = useRouter()
+const router = useRouter();
 
 const goToProductPage = () => {
-  router.push({ name: props.routeName })
-}
+  router.push({ name: props.routeName });
+};
 </script>
 
 <style scoped>

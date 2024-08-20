@@ -1,26 +1,46 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
+    /* Language and Environment */
+    "target": "ES2020",                            // Define la versión de JavaScript que se generará.
+    "module": "ESNext",                             // Usa el sistema de módulos ESNext.
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],       // Incluye las bibliotecas ES2020 y DOM.
+    "jsx": "preserve",                              // Conserva el JSX en el código (útil para Vue JSX).
+    "moduleResolution": "bundler",                  // Modo de resolución de módulos para bundlers como Vite.
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
+    /* Type Checking */
+    "strict": true,                                 // Habilita todas las verificaciones estrictas.
+    "noUnusedLocals": true,                         // Advierte sobre variables locales no utilizadas.
+    "noUnusedParameters": true,                     // Advierte sobre parámetros de función no utilizados.
+    "noFallthroughCasesInSwitch": true,             // Previene errores de fallthrough en switch.
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "types": ["vue-router", "node"] // Añadir esta línea para incluir los tipos
+    /* Source Map and Emit */
+    "sourceMap": true,                              // Genera source maps para facilitar la depuración.
+    "noEmit": true,                                 // No emite archivos de salida.
+
+    /* Paths and Module Resolution */
+    "baseUrl": ".",                                 // Base URL para resolver rutas de módulos.
+    "paths": {
+      "@/*": ["src/*"]                              // Alias para la carpeta src.
+    },
+    "resolveJsonModule": true,                      // Permite la importación de archivos JSON.
+    "allowSyntheticDefaultImports": true,           // Permite importar módulos con "import default from 'module'".
+    "esModuleInterop": true,                        // Habilita la interoperabilidad con ES Modules.
+
+    /* Type Definitions */
+    "types": ["vite/client", "vue-router", "node"], // Incluye definiciones de tipos necesarias.
+
+    /* Experimental */
+    "useDefineForClassFields": true                 // Soporta la sintaxis `define` para campos de clase.
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.d.ts",                               // Incluye archivos de declaración de tipos.
+    "src/types/*.d.ts"                             // Incluye tu archivo de declaración para SVG.
+  ],
+  "exclude": ["node_modules"],                     // Excluye la carpeta node_modules.
+  "references": [
+    { "path": "./tsconfig.node.json" }             // Referencia a la configuración para Node.js si es necesario.
+  ]
 }

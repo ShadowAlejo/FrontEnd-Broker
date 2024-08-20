@@ -19,46 +19,52 @@
 
 <script setup lang="ts">
 import ProductCard from './ProductCard.vue'
+import respaldoFamiliar from '@/assets/respaldoFamiliar.svg';
+import fianzas from '@/assets/fianzas.svg';
+import planJubilacion from '@/assets/planJubilacion.svg';
+import seguroSalud from '@/assets/seguroSalud.svg';
+import seguroVehiculos from '@/assets/seguroVehiculos.svg';
+import seguroHogar from '@/assets/seguroHogar.svg';
 
 const products = [
   {
-    image: '/src/assets/respaldoFamiliar.svg',
+    image: respaldoFamiliar,
     title: 'Respaldo Familiar',
     description: 'Un seguro que te ayuda a planificar tu futuro en el caso de cualquier eventualidad.',
-    routeName: 'Respaldo' // Nombre de la ruta correspondiente
+    routeName: 'Respaldo'
   },
   {
-    image: '/src/assets/fianzas.svg',
+    image: fianzas,
     title: 'Fianzas',
     description: 'Te acompañamos en el cumplimiento de tus obligaciones con un servicio ágil y una asesoría especializada.',
-    routeName: 'Fianzas' // Nombre de la ruta correspondiente
+    routeName: 'Fianzas'
   },
   {
-    image: '/src/assets/planJubilacion.svg',
+    image: planJubilacion,
     title: 'Plan de jubilación',
     description: 'Solución para cumplir tu meta y llegar a la edad de retiro sin preocupaciones.',
-    routeName: 'PlanJubilacion' // Nombre de la ruta correspondiente
+    routeName: 'PlanJubilacion'
   },
   {
-    image: '/src/assets/seguroSalud.svg',
+    image: seguroSalud,
     title: 'Seguro de Salud',
     description: 'Cubre tus necesidades médicas y las de tu familia con el mejor servicio de salud.',
-    routeName: 'SeguroSalud' // Nombre de la ruta correspondiente
+    routeName: 'SeguroSalud'
   },
   {
-    image: '/src/assets/seguroVehiculos.svg',
+    image: seguroVehiculos,
     title: 'Seguro de Vehículos',
     description: 'Protege tu vehículo contra accidentes y robos con nuestro seguro integral.',
-    routeName: 'SeguroVehiculos' // Nombre de la ruta correspondiente
+    routeName: 'SeguroVehiculos'
   },
   {
-    image: '/src/assets/seguroHogar.svg',
+    image: seguroHogar,
     title: 'Seguro de Hogar',
     description: 'Asegura tu hogar contra cualquier eventualidad con nuestras coberturas completas.',
-    routeName: 'SeguroHogar' // Nombre de la ruta correspondiente
+    routeName: 'SeguroHogar'
   }
-]
+];
 </script>
 
-<style scoped>
+<style scoped> 
 </style>
