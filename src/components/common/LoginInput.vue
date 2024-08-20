@@ -6,21 +6,33 @@
         :id="id" 
         :name="name" 
         :placeholder="placeholder" 
-        v-bind:value="modelValue"
-        v-on:input="$emit('update:modelValue', $event.target.value)"
+        :value="modelValue"
+        @input="updateValue"
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+import { defineProps, defineEmits } from 'vue'
+
+// Definir los props sin asignarlos a una variable
+defineProps({
   id: String,
   label: String,
   type: String,
   name: String,
   placeholder: String,
-  modelValue: String // Este prop permite el binding con `v-model`
+  modelValue: String
 })
+
+const emit = defineEmits(['update:modelValue'])
+
+const updateValue = (event: Event) => {
+  const target = event.target as HTMLInputElement | null;
+  if (target) {
+    emit('update:modelValue', target.value);
+  }
+}
 </script>
 
 <style scoped>

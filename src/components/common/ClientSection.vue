@@ -52,7 +52,7 @@
 </template>
 
 <script setup lang="ts">
-const scrollToSection = (sectionId) => {
+const scrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId)
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' })

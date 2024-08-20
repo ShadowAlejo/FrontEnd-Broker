@@ -14,24 +14,25 @@
   </template>
   
   <script setup lang="ts">
-  import { defineProps, defineEmits } from 'vue'
-  
-  const props = defineProps({
-    id: String,
-    label: String,
-    type: String,
-    name: String,
-    placeholder: String,
-    modelValue: [String, Number]
-  })
-  
-  const emits = defineEmits(['update:modelValue'])
-  
-  const updateValue = (event: Event) => {
-    const target = event.target as HTMLInputElement
-    emits('update:modelValue', target.value)
-  }
-  </script>
+import { defineEmits } from 'vue'
+
+// Define los props sin asignarlos a una variable
+defineProps({
+  id: String,
+  label: String,
+  type: String,
+  name: String,
+  placeholder: String,
+  modelValue: [String, Number]
+})
+
+const emit = defineEmits(['update:modelValue'])
+
+const updateValue = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  emit('update:modelValue', target.value)
+}
+</script>
   
   <style scoped>
   </style>

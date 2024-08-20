@@ -14,7 +14,6 @@ import SeguroHogar from '../pages/SeguroHogar.vue'
 import ReportarSiniestro from '../pages/ReportarSiniestro.vue'
 import SolicitarAsistencia from '../pages/SolicitarAsistencia.vue'
 import MiPoliza from '../pages/MiPoliza.vue'
-import { comment } from 'postcss'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },

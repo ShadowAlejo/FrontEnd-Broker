@@ -9,7 +9,7 @@
         <slot></slot>
       </div>
       <div class="card-footer">
-        <RouterLink :to="link" class="font-medium hover:underline">View {{ title }}</RouterLink>
+        <RouterLink :to="link || ''" class="font-medium hover:underline">View {{ title }}</RouterLink>
       </div>
     </div>
   </template>
