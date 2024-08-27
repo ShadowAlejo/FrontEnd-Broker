@@ -14,6 +14,11 @@ import SeguroHogar from '../pages/SeguroHogar.vue'
 import ReportarSiniestro from '../pages/ReportarSiniestro.vue'
 import SolicitarAsistencia from '../pages/SolicitarAsistencia.vue'
 import MiPoliza from '../pages/MiPoliza.vue'
+import AdminPage from '../pages/AdminPage.vue'
+import AddClient from '../components/common/AddClient.vue'
+import ClientList from '../components/common/ClientList.vue'
+import EditContract from '../components/common/EditContract.vue'
+import HandleRequests from '../components/common/HandleRequests.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -29,7 +34,15 @@ const routes = [
   { path: '/segurohogar', name: 'SeguroHogar', component: SeguroHogar },
   { path: '/reportarSiniestro', name: 'reportarSiniestro', component: ReportarSiniestro},
   { path: '/solicitarasistencia', name: 'SolicitarAsistencia', component: SolicitarAsistencia},
-  { path: '/mipoliza', name: 'MiPoliza', component: MiPoliza}
+  { path: '/mipoliza', name: 'MiPoliza', component: MiPoliza},
+  { path: '/adminpage', name: 'AdminPage', component: AdminPage, 
+    children: [
+      { path: 'add-client', name: 'AddClient', component: AddClient },
+      { path: 'client-list', name: 'ClientList', component: ClientList },
+      { path: 'edit-contract', name: 'EditContract', component: EditContract },
+      { path: 'handle-requests', name: 'HandleRequests', component: HandleRequests },
+    ]
+  }
 ]
 
 const router = createRouter({

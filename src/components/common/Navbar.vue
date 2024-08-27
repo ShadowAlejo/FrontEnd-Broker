@@ -10,6 +10,7 @@
         <RouterLink to="/" class="hover:text-gray-400">Inicio</RouterLink>
         <RouterLink to="/about" class="hover:text-gray-400">Acerca</RouterLink>
         <RouterLink to="/contact" class="hover:text-gray-400">Contactarnos</RouterLink>
+        <RouterLink to="/adminpage" class="hover:text-gray-400">Administradores</RouterLink>
         <RouterLink to="/login" class="hover:text-gray-400">Iniciar Sesión</RouterLink>
         <RouterLink to="/register" class="hover:text-gray-400">Registrarse</RouterLink>
       </div>
@@ -25,6 +26,7 @@
       <RouterLink to="/" class="block mt-2 hover:text-gray-400">Inicio</RouterLink>
       <RouterLink to="/about" class="block mt-2 hover:text-gray-400">Acerca</RouterLink>
       <RouterLink to="/contact" class="block mt-2 hover:text-gray-400">Contactarnos</RouterLink>
+      <RouterLink to="/adminpage" class="block mt-2 hover:text-gray-400">Administradores</RouterLink>
       <RouterLink to="/login" class="block mt-2 hover:text-gray-400">Iniciar Sesión</RouterLink>
       <RouterLink to="/register" class="block mt-2 hover:text-gray-400">Registrarse</RouterLink>
     </div>
