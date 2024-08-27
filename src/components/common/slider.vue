@@ -1,5 +1,5 @@
 <template>
-  <div class="slider-container mx-auto rounded-2xl">
+  <div class="slider-container">
     <div class="slider-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
       <slot></slot>
     </div>
@@ -10,9 +10,9 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const currentSlide = ref(0)
-const slides = ref([])
+let slides = ref([])
 
-const next = () => {
+function next() {
   currentSlide.value = (currentSlide.value + 1) % slides.value.length
 }
 
@@ -29,13 +29,16 @@ onMounted(() => {
 
 <style scoped>
 .slider-container {
-  width: 62%;
+  width: 60%; /* Reduce el ancho del slider al 60% del contenedor padre */
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   position: relative;
+  border-radius: 15px; /* Redondea los bordes del slider */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 0 auto; /* Centra el slider horizontalmente */
 }
 
 .slider-track {
@@ -48,5 +51,7 @@ onMounted(() => {
   flex-shrink: 0;
   width: 100%;
   height: auto;
+  border-radius: 15px; /* Aplica el redondeo a los elementos del slider */
+  overflow: hidden; /* Asegura que el contenido no se desborde de los bordes redondeados */
 }
 </style>

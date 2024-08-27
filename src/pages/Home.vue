@@ -29,8 +29,8 @@ import Slider from '../components/common/slider.vue'
 import SliderItem from '../components/common/sliderItem.vue'
 import ClientSection from '../components/common/ClientSection.vue'
 import ProductSection from '../components/common/ProductSection.vue'
-
 </script>
 
 <style scoped>
+.container { max-width: 100%; padding: 0 1rem; }
 </style>
