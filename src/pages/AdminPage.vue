@@ -25,7 +25,6 @@
   const navLinks = [
     { name: 'Agregar Cliente', path: '/adminpage/add-client', icon: 'fas fa-user-plus' },
     { name: 'Lista de Clientes', path: '/adminpage/client-list', icon: 'fas fa-users' },
-    { name: 'Modificar Contrato', path: '/adminpage/edit-contract', icon: 'fas fa-file-contract' },
     { name: 'Atender Solicitudes', path: '/adminpage/handle-requests', icon: 'fas fa-envelope-open-text' },
   ];
   

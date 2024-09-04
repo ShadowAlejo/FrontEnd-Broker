@@ -17,7 +17,6 @@ import MiPoliza from '../pages/MiPoliza.vue'
 import AdminPage from '../pages/AdminPage.vue'
 import AddClient from '../components/common/AddClient.vue'
 import ClientList from '../components/common/ClientList.vue'
-import EditContract from '../components/common/EditContract.vue'
 import HandleRequests from '../components/common/HandleRequests.vue'
 
 const routes = [
@@ -39,7 +38,6 @@ const routes = [
     children: [
       { path: 'add-client', name: 'AddClient', component: AddClient },
       { path: 'client-list', name: 'ClientList', component: ClientList },
-      { path: 'edit-contract', name: 'EditContract', component: EditContract },
       { path: 'handle-requests', name: 'HandleRequests', component: HandleRequests },
     ]
   }

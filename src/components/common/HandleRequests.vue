@@ -37,7 +37,7 @@
     </div>
 
     <!-- Modal -->
-    <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div v-if="isModalOpen && selectedRequest" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
         <h3 class="text-xl font-bold mb-4">Modificar Solicitud</h3>
         <form @submit.prevent="submitForm">
@@ -121,20 +121,24 @@ const requests = ref<Request[]>([
   },
 ]);
 
+// Variables de estado para el modal y la notificación
 const isModalOpen = ref(false);
 const selectedRequest = ref<Request | null>(null);
 const notificationVisible = ref(false);
 
+// Función para abrir el modal con los datos seleccionados
 const openModal = (request: Request) => {
-  selectedRequest.value = { ...request }; // Copiamos los datos para editar
+  selectedRequest.value = { ...request }; // Copiamos los datos de la solicitud seleccionada
   isModalOpen.value = true;
 };
 
+// Función para cerrar el modal
 const closeModal = () => {
   isModalOpen.value = false;
   selectedRequest.value = null;
 };
 
+// Función para enviar el formulario y completar la solicitud
 const submitForm = () => {
   if (selectedRequest.value) {
     const index = requests.value.findIndex(r => r.id === selectedRequest.value?.id);
