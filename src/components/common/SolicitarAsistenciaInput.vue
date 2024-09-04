@@ -1,4 +1,5 @@
 <template>
+  <!-- Este componente maneja la entrada de datos con handleInput -->
   <div class="mb-4">
     <label :for="id" class="block text-gray-700 font-bold mb-2">{{ label }}</label>
     <input 
@@ -7,9 +8,8 @@
       :name="name" 
       :placeholder="placeholder" 
       :value="modelValue" 
-      @input="handleInput"  <!-- Aquí se utiliza la función handleInput -->
-      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-    />
+      @input="handleInput"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
   </div>
 </template>
 
